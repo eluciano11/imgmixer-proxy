@@ -11,6 +11,7 @@
     "helmet": "^3.18.0",
     "morgan": "^1.9.1",
     "node-fetch": "^2.6.0",
+    "typescript": "^3.5.1",
     "unsplash-js": "^5.0.0"
   },
   "devDependencies": {
@@ -22,8 +23,7 @@
     "@types/node": "^12.0.7",
     "@types/node-fetch": "^2.3.5",
     "@types/unsplash-js": "^5.0.0",
-    "nodemon": "^1.19.1",
-    "typescript": "^3.5.1"
+    "nodemon": "^1.19.1"
   },
   "scripts": {
     "start": "yarn compile && node build/server.js",

@@ -1,7 +1,7 @@
 {
   "name": "unsplash-proxy",
   "version": "0.0.0",
-  "description": "Proxy for the unsplash api",
+  "description": "Proxy for the Unsplash API",
   "main": "server.js",
   "license": "MIT",
   "dependencies": {
@@ -28,7 +28,8 @@
   "scripts": {
     "start": "node build/server.js",
     "start:watch": "nodemon",
-    "build": "rm -rf dist && yarn compile",
+    "restart": "yarn run compile && yarn run start",
+    "build": "rm -rf build && yarn compile",
     "compile": "tsc"
   },
   "nodemonConfig": {
@@ -39,7 +40,7 @@
     "watch": [
       "src"
     ],
-    "exec": "npm start",
+    "exec": "yarn run restart",
     "ext": "ts"
   },
   "engines": {

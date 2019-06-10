@@ -26,7 +26,7 @@
     "nodemon": "^1.19.1"
   },
   "scripts": {
-    "start": "yarn compile && node build/server.js",
+    "start": "node build/server.js",
     "start:watch": "nodemon",
     "build": "rm -rf dist && yarn compile",
     "compile": "tsc"

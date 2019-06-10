@@ -1,5 +1,6 @@
 import fetch from "node-fetch";
 import express from "express";
+import helmet from "helmet";
 import dotenv from "dotenv";
 import morgan from "morgan";
 import cors from "cors";
@@ -13,8 +14,9 @@ dotenv.config();
 const unsplash = PhotoAPI.initialize();
 const api = express();
 
-api.use(cors({ origin: process.env.CLIENT_URL }));
 api.use(morgan("tiny"));
+api.use(cors({ origin: process.env.CLIENT_URL }));
+api.use(helmet());
 api.get("/photos", async (req: express.Request, res: express.Response) => {
   const { query } = req;
   const response = await unsplash.getRandomPhoto({
